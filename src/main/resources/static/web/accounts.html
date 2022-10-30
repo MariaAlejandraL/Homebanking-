@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/accounts.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Mindhub Bank</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <header>
+        <div class="nav-account">
+          <h1>Homebanking</h1>
+          <nav>
+            <ul>
+              <li>
+                <button class="login-button register" @click="logout">
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section id="central-section" class="inner dashboard">
+        <div id="dashboard-main">
+          <div id="dashboard-text">
+            <span>
+              <h2 class="dashboard-text-element">
+                Welcome, {{clients.name + " " + clients.lastName}}
+              </h2>
+            </span>
+          </div>
+          <pre>
+            {{accounts2}}
+          </pre>
+          <div id="dashboard-table">
+            <div class="dashboard-table-nav">
+              <ul class="dashboard-table-nav-nav">
+                <li class="resume">
+                  <i class="uil uil-resume uil-file-alt"></i>
+                  <h3>Resume</h3>
+                </li>
+                <li class="nav-dash-active">
+                  <i class="uil uil-nav uil-folder-open"></i>
+                  <p class="uil-p"><a href="/web/accounts.html">Products</a></p>
+                </li>
+                <li class="nav-dash">
+                  <i class="uil uil-nav uil-money-bill"></i>
+                  <p class="uil-p"><a href="/web/cards.html">Cards</a></p>
+                </li>
+                <li class="nav-dash">
+                  <i class="uil uil-nav uil-money-bill"></i>
+                  <p class="uil-p">
+                    <a href="/web/transfers.html">Transfers</a>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-resumen">
+                <div class="side-menu">
+                  <ul class="side-menu-ul">
+                    <li><i class="uil uil-resume-b uil-user-check"></i></li>
+                    <li>
+                      <a v-if="activeAccounts.length < 3"
+                      @click="showModal = true"
+                        >New Account</a
+                      >
+                    </li>
+                    <transition>
+                      <div class="modal" v-if="showModal">
+                        <select v-model="accountType">
+                          <option>SAVING</option>
+                          <option>CHECKING</option>
+                        </select>
+                        <button class="modal-button" @click="createAccount">Create</button>
+                      </div>
+                    </transition>
+                    <transition>
+                      <div class="modal-overlay" v-if="showModal"></div>
+                    </transition>
+                    <li><a href="/web/create-card.html">New Card</a></li>
+                  </ul>
+                </div>
+                <div class="tables">
+                  <table v-for="account in activeAccounts">
+                    <tbody>
+                      <span class="tbody-title" v-if="activeAccounts != '' ">
+                        ✅ My Accounts</span
+                      >
+                      <tr>
+                        <td class="td-subtitle">{{account.number}}</td>
+                        <td>
+                          <span class="table-text">Creation date:</span>
+                          {{account.creationDate.slice(0,10)}}
+                        </td>
+                        <td>
+                          <span class="table-text"> Balance: </span>
+                          💲{{account.balance}}
+                        </td>
+                        <td>
+                          <span class="table-text"> Type: </span>
+                             {{account.typeAccount}}
+                        </td>
+                      </tr>
+                    </tbody>
+                    <div class="edit-accounts">
+                      <p>DELETE ACCOUNT (Please select number account) </p>
+                      <select
+                      v-model="accountApply"
+                      @change=" getSelectAccount"
+                    >
+                      <option class="option-account" v-for="account in activeAccounts">
+                        {{account.number}}
+                      </option>
+                    </select>
+                    <button
+                      v-if="activeAccounts != '' "
+                      class="delete-button "
+                      @click="deleteAccount(accountID)"
+                    >
+                      delete
+                    </button>
+                    </div>
+                  </table>
+                  <table v-for="loan in loans">
+                    <tbody class="tbody-2">
+                      <span class="tbody-title"> ✅ My Loans</span>
+                      <tr>
+                        <td class="td-subtitle">
+                          <span class="table-text"></span> {{loan.name}}
+                        </td>
+                        <td>
+                          <span class="table-text"> Payments: </span
+                          >{{loan.payments}}
+                        </td>
+                        <td>
+                          <span class="table-text"> Amount: </span
+                          >💲{{loan.amount}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button class="panel-button">
+                    <a class="loan-button" href="/web/loan-application.html"
+                      >🔖 Apply</a
+                    >
+                  </button>
+                </div>
+              </div>
+              <div class="dashboard-table-content-panel">
+                <div class="panel">
+                  <h3 class="panel-title">
+                    Transactions <i class="uil uil-comparison"></i>
+                  </h3>
+                  <div class="panel-inner">
+                    <p>Select account</p>
+                    <select v-model="idAccount">
+                      <option v-for="account in activeAccounts" :value="account">
+                        {{account.number}}
+                      </option>
+                    </select>
+                    <button class="panel-button">
+                      <a
+                        class="loan-button"
+                        :href="'account.html?id='+idAccount.id"
+                        >Consult</a
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>MINDHUB BANK - Homebanking</footer>
+    <!--Scripts-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/script/accounts.js"></script>
+  </body>
+</html>

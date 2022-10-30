@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/*Header*/
+header{
+    background-color:#072146;
+    padding: 2rem;
+}
+h1{
+    color: white;
+}
+[v-cloak]{
+    display: none;
+}
+.doc-pdf{
+    display: none;
+}
+
+nav li{
+    display: inline;
+}
+#login-email , #login-password{
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin: 0.8rem;
+    border: none;
+}
+.login-button{
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    border: none;
+    background: #028484;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+}
+.login-button:hover{
+
+    font-size: 1.2rem;
+    
+} 
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem 9em;
+}
+.li-ancore a{
+    color: #f8af49;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    
+}
+.uil-index , .uil-register{
+    color: #f8af49;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700; 
+    margin-right: 4rem;
+    cursor: pointer;
+}
+.li-ancore a:hover{
+    text-decoration: underline;
+}
+.delete-button{
+    background-color: red;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+}
+.create-button{
+    background-color: green;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+}
+.form-create-loan{
+ 
+    background-color: #E7E9EA;
+    margin: 0;
+}
+.form-loan{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+
+}
+.input-create-loan{
+    margin: 1rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.loan-label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.title-new-loan{
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.new-loan-button{
+    margin-top: 3rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #028484;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+}
+
+
+/*Header*/
+/*   -----    */
+/*Main*/
+.main-ul li{
+    display: inline-block;
+}
+.main-ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #043263;
+}
+.main-text{
+    text-align: left;    
+    margin: 6rem 6rem;
+}
+.main-text-register{
+    font-size: 1rem;
+    margin: 2rem;
+    color: white;
+}
+.main-text h2{
+    color: #028484;
+    font-size: 3rem;
+}
+.main-text h3{
+    color: white;
+    font-size: 2rem; 
+    width: 29rem;
+}
+.main-text p{
+    color: white;
+}
+.main-img{
+    margin-right: 10rem;
+}
+/*Main*/
+/*   -----    */
+/*Section*/
+.section-ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+.section-ul li{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px ;
+    box-sizing: border-box;
+    border: 1.4px solid #043263;
+    border-radius: 25px;
+}
+.section-ul li:hover{
+    border: 2.5px solid #043263;
+}
+.section-ul h2{
+    font-weight: bold;
+}
+.section-ul p{
+    font-size: 18px;
+}
+.section-img{
+    width: 100%;
+}
+section{
+    padding: 3rem;
+}
+.register-input{
+    display: block;
+    margin: 0.8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem 6rem;
+    border: none;
+}
+.section-register{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    background: #043263;
+    color: white;
+}
+.register-button{
+    padding-left: 1rem ;
+    padding-right: 1rem ;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1.3rem;
+    border: none;
+    background: #028484;
+    color: black;
+    font-weight: 700;
+    margin: 2rem;
+    cursor: pointer;
+}
+.register-button:hover{
+    background-color: #f8af49;
+   font-size: 1.4rem;
+   text-decoration: underline;
+
+}
+/*Section*/
+/*   -----    */
+/*Footer*/
+footer{
+    display: flex;
+    justify-content:space-around;
+    background-color: #E7E9EA;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+footer li{
+    list-style: none;
+}
+.ul-social{
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+}
+.uil-social{
+    color: #043263;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700; 
+    margin-right: 4rem;
+    cursor: pointer;
+}
+.uil-social:hover{
+    color: #f8af49;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 700; 
+    margin-right: 4rem;
+}
+.ul-index{
+    text-decoration: underline;
+    padding: 1rem;
+}
+.ul-index li{
+    margin: 0.3rem;
+}
+
+/*Footer*/
+
+/*Responsive------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 375px ){
+    header{
+        padding: 10rem;
+        width: 100%;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        margin-right: -3rem;
+    }
+    h1{
+       font-size: 1.5rem;
+       display: flex;
+       justify-content:center;
+       align-items: baseline;
+       margin: -9rem;
+    }
+    nav ul{
+       margin-top: 2rem;
+    }
+    .li-ancore{
+        margin-left: -13rem;
+    }
+    
+    .uil-index , .uil-register{
+        font-size: 0.1rem;
+        color: #072146;
+       
+    }
+    .login-button , .li-ancore{
+        margin-left: 4rem;
+    }
+    /*Header*/
+    /*   -----    */
+    /*Main*/
+    .main-ul li{
+       display: flex;
+       flex-direction: column;
+    }
+    .main-ul{
+        display: flex;
+       flex-direction: column;
+    }
+    .main-text{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .main-text-register{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .main-text h2{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .main-text h3{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+        width: 83vw;
+        margin-top: 1rem;
+    }
+    
+    .main-img , img{
+        display: none;
+    }
+    
+   
+   
+    /*Main*/
+    /*   -----    */
+    /*Section*/
+    .section-ul{
+
+        display: flex;
+        justify-content: center ;
+        flex-direction: column;
+    }
+    .section-ul li{
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        margin-left: -2rem;
+        margin-top: 0.8rem;
+    }
+    .register-input{
+        width: 80vw;
+        font-size: 0.9rem;
+       
+    }
+    .register-button{
+       margin-left: 5rem;
+    }
+    .register-button:hover{
+        background-color: #f8af49;
+       font-size: 1.4rem;
+       text-decoration: underline;
+    
+    }
+    /*Section*/
+    /*   -----    */
+    /*Footer*/
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+   
+    .ul-social{
+        display: flex;
+        flex-direction: column;
+    }
+    .uil-social{
+    font-size: 1rem;
+    }
+  
+    .ul-index{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .form-loan{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .input-create-loan{
+        width: 80%;
+    }
+    
+
+}
+@media screen and (max-width: 425px ){
+    header{
+        padding: 10rem;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        margin-right: -2rem;
+    }
+    h1{
+       font-size: 1.5rem;
+       display: flex;
+       justify-content:center;
+       align-items: baseline;
+       margin: -9rem;
+    }
+    nav ul{
+       margin-top: 2rem;
+    }
+    
+    .uil-index , .uil-register{
+        font-size: 0.1rem;
+        color: #072146;
+       
+    }
+    .login-button , .li-ancore{
+        margin-left: 3.4rem;
+    }
+    /*Header*/
+    /*   -----    */
+    /*Main*/
+    .main-ul li{
+       display: flex;
+       flex-direction: column;
+    }
+    .main-ul{
+        display: flex;
+       flex-direction: column;
+    }
+    .main-text{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .main-text-register{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .main-text h2{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .main-text h3{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+        width: 83vw;
+        margin-top: 1rem;
+    }
+    
+    .main-img , img{
+        display: none;
+    }
+    
+   
+   
+    /*Main*/
+    /*   -----    */
+    /*Section*/
+    .section-ul{
+
+        display: flex;
+        justify-content: center ;
+        flex-direction: column;
+    }
+    .section-ul li{
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        margin-left: -2rem;
+        margin-top: 0.8rem;
+    }
+    .register-input{
+        width: 80vw;
+        font-size: 0.9rem;
+       
+    }
+    .register-button{
+       margin-left: 5rem;
+    }
+    .register-button:hover{
+        background-color: #f8af49;
+       font-size: 1.4rem;
+       text-decoration: underline;
+    
+    }
+    /*Section*/
+    /*   -----    */
+    /*Footer*/
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+   
+    .ul-social{
+        display: flex;
+        flex-direction: column;
+    }
+    .uil-social{
+    font-size: 1rem;
+    }
+  
+    .ul-index{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+
+}
+@media screen and (max-width: 768px ){
+    header{
+        padding: 10rem;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+       font-size: 1.5rem;
+       display: flex;
+       justify-content:center;
+       align-items: baseline;
+       margin: -9rem;
+    }
+    nav ul{
+       margin-top: 2rem;
+    }
+    
+    .uil-index , .uil-register{
+        font-size: 0.1rem;
+        color: #072146;
+       
+    }
+    .login-button , .li-ancore{
+        margin-left: 3.4rem;
+    }
+    /*Header*/
+    /*   -----    */
+    /*Main*/
+    .main-ul li{
+       display: flex;
+       flex-direction: column;
+    }
+    .main-ul{
+        display: flex;
+       flex-direction: column;
+    }
+    .main-text{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .main-text-register{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .main-text h2{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .main-text h3{
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+        width: 83vw;
+        margin-top: 1rem;
+    }
+    
+    .main-img , img{
+        display: none;
+    }
+    
+   
+   
+    /*Main*/
+    /*   -----    */
+    /*Section*/
+    .section-ul{
+
+        display: flex;
+        justify-content: center ;
+        flex-direction: column;
+    }
+    .section-ul li{
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+    
+        margin-top: 0.8rem;
+
+    }
+    .register-input{
+        width: 50vw;
+        font-size: 0.9rem;
+       
+    }
+    .register-button{
+       margin-left: 5rem;
+    }
+    .register-button:hover{
+        background-color: #f8af49;
+       font-size: 1.4rem;
+       text-decoration: underline;
+    
+    }
+    /*Section*/
+    /*   -----    */
+    /*Footer*/
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+   
+    .ul-social{
+        display: flex;
+        flex-direction: column;
+    }
+    .uil-social{
+    font-size: 1rem;
+    }
+  
+    .ul-index{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+
+}
+
+
+

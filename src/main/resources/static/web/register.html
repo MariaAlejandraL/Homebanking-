@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Mindhub Bank</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-index">
+        <h1>Homebanking</h1>
+        <nav>
+          <ul>
+            <li class="li-ancore"><a href="/web/index.html">Home</a></li>
+            <i class="uil uil-register uil-map-pin"></i>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <ul class="main-ul">
+        <li class="main-text-register">
+          <h3>
+            We responsibly provide financial services that enable growth and
+            economic progress
+          </h3>
+        </li>
+      </ul>
+      <ul class="section-register" id="app" v-cloak>
+        <li>
+          <img
+            src="/assets/img5.png"
+            alt=" Ilustration from Blush Open Peeps"
+            width="200"
+          />
+          <form  >
+            <input
+              class="register-input"
+              type="text"
+              placeholder="Enter your name"
+              required
+              v-model="name"
+            />
+            <input
+              class="register-input"
+              type="text"
+              placeholder="Enter your last name"
+              required
+              v-model="lastName"
+            />
+            <input
+              class="register-input"
+              type="email"
+              placeholder="Enter your email"
+              required
+              v-model="email"
+            />
+            <input
+              class="register-input"
+              type="password"
+              placeholder="Enter your password"
+              required
+              v-model="password"
+            />
+            <div class="register-button" @click="register">Register</div>
+          </form>
+        </li>
+      </ul>
+    </main>
+    <section>
+      <ul class="section-ul">
+        <li>Personal Banking & Wealth Management</li>
+      </ul>
+    </section>
+    <footer>
+     
+      <ul class="ul-social">
+        <i class="uil uil-social uil-facebook-f"></i>
+        <i class="uil uil-social uil-twitter"></i>
+        <i class="uil uil-social uil-youtube"></i>
+        <i class="uil uil-social uil-linkedin"></i>
+      </ul>
+    </footer>
+     <!--Scripts-->
+     <script src="https://unpkg.com/vue@3"></script>
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="/script/register.js"></script>
+  </body>
+</html>

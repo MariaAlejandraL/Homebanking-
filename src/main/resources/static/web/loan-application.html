@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/accounts.css" />
+    <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
+    <title>Mindhub Bank</title>
+  </head>
+  <body>
+
+    <div id="app" v-cloak>
+    <header>
+      <div class="nav-account">
+        <h1>Homebanking</h1>
+        <nav>
+          <ul>
+            <li><button class="login-button register"  @click="logout">Logout</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="central-section" class="inner dashboard">
+
+      <div id="dashboard-main">
+        <div id="dashboard-text">
+          <span>
+            <h2 class="dashboard-text-element">Welcome, Melba Morel</h2>
+            
+          </span>
+        </div>
+        <div id="dashboard-table">
+          <div class="dashboard-table-nav">
+              <ul class="dashboard-table-nav-nav">
+                <li class="resume"><i class="uil uil-resume uil-file-alt"></i><h3>Resume</h3></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-folder-open"></i><p class="uil-p"><a href="/web/accounts.html">Products</a></p></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-money-bill"></i><p class="uil-p"><a href="/web/cards.html">Cards</a></p></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-folder-open"></i><p class="uil-p"><a href="/web/transfers.html">Transfers</a></p></li>
+              </ul>
+          </div>
+          <div class="dashboard-table-content">
+            <div class="dashboard-table-content-resumen">
+              <div class="side-menu">
+                <ul class="side-menu-ul">
+                  <li><i class="uil uil-resume-b uil-user-check"></i></li>
+                  <li class="side-menu-ul"><a href="/web/create-card.html">New Card</a></li>
+                </ul>
+              </div>
+              <div>
+                <table >
+                  <form v-on:submit.prevent class="table-transfer">
+                    <span  class="tbody-title"> New Loan</span>
+                     <tr class="loan-application">
+                       <td>
+                        Select Loan
+                        <select v-model="loanApply"  @change="getLoans">
+                          <option v-for="loan in loans">{{loan.name}}</option>
+                        </select>
+                       </td>
+                       <td>
+                        <span>Max amount : <b> 💲{{maxAmounts}}</b></span>
+                      <input v-model="amountApply" type="number" class="input-loan">
+                       </td>
+                       <td>
+                        Select Payments
+                        <select v-model="paymentApply">
+                          <option v-for="pay in payment" :value="pay">{{pay}}</option>
+                        </select>
+                       </td>
+                       <td v-if="paymentApply != ''"  v-for="loan in selectLoan">
+                        Payment per month: <h4>{{(amountApply/paymentApply).toFixed(1)}}</h4>
+                        
+                       </td>
+                       <td>
+                        Select Destiny Account
+                        <select v-model="accountApply">
+                          <option v-for="account in activeAccounts">{{account.number}}</option>
+                        </select>
+                       </td>
+                     </tr>
+                        <tr>
+                       <td>
+                        <button class="panel-button" @click="createLoan">Apply</button>
+                       </td>
+                     </tr>
+                    </form>
+                </table>
+              </div>
+
+            </div>
+            <div class="dashboard-table-content-panel">
+              <div class="panel">
+                <h3 class="panel-title">Transactions <i class="uil uil-comparison"></i></h3>
+                <div class="panel-inner">
+                  <button class="panel-button"><a class="loan-button"  href="/web/accounts.html">Consult</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      MINDHUB BANK - Homebanking
+    </footer>
+    </div>
+
+
+    <!--Scripts-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/script/loan-application.js"></script>
+  </body>
+</html>

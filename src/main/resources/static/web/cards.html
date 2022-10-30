@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/accounts.css" />
+    <link rel="stylesheet" href="/style/cards.css">
+    <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
+    <title>Mindhub Bank</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+    <header>
+      <div class="nav-account">
+        <h1>Homebanking</h1>
+        <nav>
+          <ul>
+            <li><button class="login-button register"  @click="logout">Logout</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="central-section" class="inner dashboard">
+      <div id="dashboard-main">
+        <div id="dashboard-text">
+          <span>
+            <h2 class="dashboard-text-element">Welcome, Melba Morel</h2>
+          </span>
+        </div>
+        <div id="dashboard-table">
+          <div class="dashboard-table-nav">
+              <ul class="dashboard-table-nav-nav">
+                <li class="resume"><i class="uil uil-resume uil-file-alt"></i><h3>Resume</h3></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-folder-open"></i><p class="uil-p"><a href="/web/accounts.html">Products</a></p></li>
+                <li class="nav-dash-active"><i class="uil uil-nav uil-money-bill"></i><p class="uil-p"><a href="/web/cards.html">Cards</a></p></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-folder-open"></i><p class="uil-p"><a href="/web/transfers.html">Transfers</a></p></li>
+              </ul>
+          </div>
+          <div class="dashboard-table-content">
+            <div class="dashboard-table-content-resumen">
+              <div class="side-menu">
+                <ul class="side-menu-ul">
+                  <li><i class="uil uil-resume-b uil-user-check"></i></li>
+                  <li><a href="/web/create-card.html">New Card</a></li>
+                </ul>
+              </div>
+              <div class="created-cards">
+                     <div>
+                      <button class="panel-button delete-card" v-if="cardsActive != '' "><a class="loan-button">🔖 Delete Card: Please select the number of the card</a> 
+                        <select class="select-responsive" v-model="cardApply" @change=" getSelectCard"> 
+                          <option v-for="card in cardsActive">{{card.number}}</option>
+                        </select>
+                      </button>
+                      <button v-if="cardsActive != '' " class="delete-button" @click="deleteCard(cardID)">delete</button>
+                       <div  v-for="card in cardsActive">
+                        <div class='card color1' v-if="card.color=='SILVER'">
+                          <div class='top-block'>
+                            <div class='card-chip'>
+                              <img src="/assets/visaLogo.png" alt="visa logo" width="70">
+                            </div>
+                            <span class='card-name'>
+                              {{card.cardHolder}}
+                            </span>
+                             <span class='card-name expired' v-if="card.toDate.slice(2,4) < currentDate">
+                              EXPIRED
+                            </span> 
+                          </div>
+                          <div class='card-number'>
+                               <p>{{card.number}}</p>
+                          </div>
+                          <div class='bottom-block'>
+                               <div class='balance'>
+                                    <div class='card-balance'>CVV :{{card.cvv}}</div>
+                                    <div class='card-balance'>Expiration: {{card.toDate.slice(2,4)}}/{{card.toDate.slice(5,7)}}</div>
+                                    <div class='card-balance'>
+                                       {{card.type}}
+                                    </div>
+                               </div>
+                          </div>
+                      </div> 
+                    <div class='card color2' v-if="card.color=='GOLD'">
+                        <div class='top-block'>
+                          <div class='card-chip'>
+                            <img src="/assets/visaLogo.png" alt="visa logo" width="70">
+                          </div>
+                          <span class='card-name'>
+                            {{card.cardHolder}}
+                          </span>
+                          <span class='card-name expired' v-if="card.toDate.slice(2,4) < currentDate">
+                            EXPIRED
+                          </span>
+                        </div>
+                        <div class='card-number'>
+                             <p>{{card.number}}</p>
+                        </div>
+                        <div class='bottom-block'>
+                             <div class='balance'>
+                                  <div class='card-balance'>CVV :{{card.cvv}}</div>
+                                  <div class='card-balance'>Expiration: {{card.toDate.slice(2,4)}}/{{card.toDate.slice(5,7)}}</div>
+                                  <div class='card-balance'>
+                                     {{card.type}}
+                                  </div>
+                                </div>
+                        </div>
+                    </div> 
+                  <div class='card color3' v-if="card.color=='TITANIUM'">
+                      <div class='top-block'>
+                        <div class='card-chip'>
+                          <img src="/assets/visaLogo.png" alt="visa logo" width="70">
+                        </div>
+                        <span class='card-name'>
+                          {{card.cardHolder}}
+                        </span>
+                        <span class='card-name expired' v-if="card.toDate.slice(2,4) < currentDate">
+                          EXPIRED
+                        </span>
+                      </div>
+                      <div class='card-number'>
+                           <p>{{card.number}}</p>
+                      </div>
+                      <div class='bottom-block'>
+                           <div class='balance'>
+                                <div class='card-balance'>CVV :{{card.cvv}}</div>
+                                <div class='card-balance'>Expiration: {{card.toDate.slice(2,4)}}/{{card.toDate.slice(5,7)}}</div>
+                                <div class='card-balance'>
+                                   {{card.type}}
+                                </div>
+                           </div>
+                      </div>
+                  </div> 
+                       </div>
+                      </div>
+              </div>
+
+            </div>
+            <div class="dashboard-table-content-panel">
+              <div class="panel">
+                <h3 class="panel-title">Transactions <i class="uil uil-comparison"></i></h3>
+                <div class="panel-inner">
+                  <button class="panel-button"><a class="loan-button"  href="/web/accounts.html">Consult</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      MINDHUB BANK - Homebanking
+    </footer>
+    </div>
+    <!--Scripts-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/script/card.js"></script>
+  </body>
+</html>

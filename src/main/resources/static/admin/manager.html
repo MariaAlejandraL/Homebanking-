@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/admin/manager.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>Mindhub Bank</title>
+  </head>
+  <body>
+    <div id="app">
+    <header>
+      <div class="nav-account">
+        <h1>Homebanking</h1>
+        <nav>
+          <ul>
+            <li>
+              <button class="login-button register" @click="logout">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="central-section" class="inner dashboard">
+    
+        <div id="dashboard-text">
+          <span>
+            <h2 class="dashboard-text-element">
+              Welcome to Admin Role 
+            </h2>
+          </span>
+        </div>
+        <div id="dashboard-table"> 
+          <div class="dashboard-table-content">
+            <div class="dashboard-table-content-resumen">
+              <div class="tables">
+                <table >
+                  <form v-on:submit.prevent class="table-transfer">
+                    <span  class="tbody-title"> New Loan</span>
+                     <tr class="loan-application">
+                       <td>
+                        Assign Loan Name
+                        <input class="input-create-loan" type="text"  v-model="newLoanName">
+                       </td>
+                       <td>
+                        Assign Loan Amount (example: 1000.0)
+                        <input class="input-create-loan" type="text" v-model="newLoanAmount">
+                       </td>
+                       <td>
+                        Assign Loan list payments (example: 1,2,3)
+                        <input class="input-create-loan" type="text"  v-model="newLoanPayments">
+                       </td>
+                       <td>
+                        Assign Loan Percentage (example: 0.20)
+                        <input class="input-create-loan" type="text"  v-model="newLoanPercentage">
+                       </td>
+                    
+                     </tr>
+                        <tr>
+                       <td>
+                        <a class="new-loan-button" @click="createLoan"> Create </a>
+                       </td>
+                     </tr>
+                    </form>
+                    <tbody class="admin-loans">
+                      <tr v-for="loan in loans">
+                        <td class="td-subtitle">{{loan.name}}</td>
+                        <td>
+                          <span class="table-text"></span>
+                          💲 {{loan.maxAmount}}
+                        </td>
+                        <td>
+                          <span class="table-text"> Payments: </span>
+                          {{loan.payments}}
+                        </td>
+                        <td>
+                          <span class="table-text"> Percentage: </span>
+                            {{loan.percentage}}
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </section>
+  </div>
+   
+    <!--Scripts-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/admin/loan-creation.js"></script>
+  </body>
+</html>

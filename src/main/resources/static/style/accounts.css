@@ -1,0 +1,1067 @@
+.li-ancore-account a {
+  color: #f8af49;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+/*esconder*/
+[v-cloak]{
+  display: none;
+}
+.modal-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+}
+.modal-button{
+  background-color: white;
+  font-weight: bold;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px rgba(0,0,0, 0,4);
+  z-index: 101;
+  background-color: #028484;
+  color: white;
+}
+.edit-accounts{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.li-ancore-account a:hover {
+  text-decoration: underline;
+}
+
+.main-text-account {
+  margin: 2rem 2rem;
+  color: white;
+  font-size: 1.4rem;
+}
+.register:hover {
+  font-size: 1.2rem;
+  background: #f8af49;
+}
+
+#central-section {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+#dashboard-text {
+  display: flex;
+}
+.dashboard-text-element {
+  margin-top: 1rem;
+}
+.dashboard-table-content {
+  margin-top: 1.5rem;
+}
+.dashboard-table-nav-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 2rem;
+  border-radius: 1.3rem;
+  margin-right: 5rem;
+}
+.dashboard-table-nav-nav li {
+  display: flex;
+  align-items: center;
+  border-radius: 1.2rem;
+  background-color: #E7E9EA;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+}
+.nav-dash-active{
+  background-color: #f8af49 !important;
+}
+.dashboard-table-nav-nav li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.resume {
+  display: flex;
+  flex-direction: column;
+  background-color: #072146 !important;
+  text-align: center;
+  color: white;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+.dashboard-table-content-resumen {
+  background-color: #E7E9EA;
+  display: flex;
+  border-bottom-left-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+.side-menu {
+  background-color: #072146;
+  padding: 0.6rem;
+  border-bottom-left-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+}
+.side-menu-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.side-menu-ul li{
+    display: flex;
+    justify-content: center;
+    margin: 0.4rem;
+}
+.side-menu-ul a{
+    text-decoration: none;
+    background: #e7e9ea;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    color: #072146;
+    width: 7vw;
+}
+.side-menu-ul a:hover{
+  text-decoration: underline;
+}
+.side-menu-ul-active a{
+  background-color: #f8af49;
+}
+
+.dashboard-table-content-panel {
+  margin-top: 5rem;
+}
+.panel-inner {
+  margin-top: 1rem;
+  background-color: #E7E9EA;
+  padding: 3rem;
+  border-radius: 1.2rem;
+}
+.panel-inner p{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.panel-title{
+    font-size: 1.4rem;
+}
+.dashboard-table-content-panel{
+padding: 3rem ;
+border-bottom-left-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+.panel-button{
+    font-size: 1rem;
+    margin: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-radius: 0.4rem;
+    background: #072146;
+    color: white;
+    font-weight: 700;
+
+}
+.uil-resume{
+    font-size:2.2rem;
+    color: white;
+    padding-top: 0.7rem;
+}
+.uil-resume-b{
+    font-size:3.2rem;
+    color: white;
+
+}
+.uil-nav{
+    font-size: 2.2rem ;
+    margin-right: 0.5rem;
+}
+.uil-p{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+select{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+   padding-right: 3rem;
+   padding-left: 1rem;
+   border-radius: 1rem;
+   padding-bottom: 0.5rem;
+   padding-top: 0.5rem;
+}
+ .tables{
+    margin: 1rem;
+ }
+table{
+  margin: 2rem;
+}
+ .tbody-title{
+  font-weight: 700;
+  font-size: 1.3rem;
+
+ }
+ .td-subtitle{
+  font-size: 1.2rem;
+ }
+ .table-text{
+  font-weight: 700;
+ }
+ td{
+  font-size: 1.1rem;
+  padding-right: 3rem;
+ }
+ .green{
+  background: #318C87;
+
+ }
+.red{
+  background: #f33c22
+}
+footer{
+    font-weight: 700;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.table-transfer{
+  display: flex;
+  flex-direction: column;
+}
+.input-transfer{
+  font-size: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.loan-button{
+  color: white !important;
+}
+.tbody-title{
+  margin: 1rem;
+}
+.loan-application{
+  display: flex;
+  flex-direction: column;
+}
+td{
+  padding: 1rem;
+}
+select{
+  margin: 1rem;
+}
+.input-loan{
+  margin: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.table-text-newBalance{
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  background: #82bf4f;
+}
+
+/*Responsive ---------------------------------------------*/
+
+@media screen and (max-width: 375px ){
+
+  .td-transfer{
+    width: 100%;
+  }
+
+  .nav-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-button{
+    margin-right: 2rem;
+  }
+  #central-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+  #dashboard-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  #dashboard-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .dashboard-text-element {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .dashboard-table-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .dashboard-table-nav-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .dashboard-table-nav-nav li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+  
+ 
+  .resume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dashboard-table-content-resumen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu-ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .side-menu-ul li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu-ul a{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  } 
+  .dashboard-table-content-panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .panel-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .panel-inner p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .panel-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dashboard-table-content-panel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .panel-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  .uil-resume{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .uil-resume-b{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  
+  }
+  .uil-nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .uil-p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  select{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tables{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
+  table{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+   .tbody-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  
+  }
+  .td-subtitle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .table-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  td{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .table-transfer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .input-transfer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .loan-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tbody-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .loan-application{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  td{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  select{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .input-loan{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .edit-accounts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .delete-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  .select-responsive{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  option{
+    font-size: 0.8rem;
+  }
+
+
+}
+@media screen and (max-width: 425px ){
+
+  .nav-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-button{
+    margin-right: 2rem;
+  }
+  #central-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+  #dashboard-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  #dashboard-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .dashboard-text-element {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .dashboard-table-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .dashboard-table-nav-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .dashboard-table-nav-nav li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+  
+ 
+  .resume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dashboard-table-content-resumen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu-ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .side-menu-ul li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu-ul a{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  } 
+  .dashboard-table-content-panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .panel-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .panel-inner p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .panel-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dashboard-table-content-panel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .panel-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  .uil-resume{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .uil-resume-b{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  
+  }
+  .uil-nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .uil-p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  select{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tables{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
+  table{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+   .tbody-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  .td-subtitle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .table-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  td{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .table-transfer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .input-transfer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .loan-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tbody-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .loan-application{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  td{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  select{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .input-loan{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .edit-accounts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .delete-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  .select-responsive{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  option{
+    font-size: 0.8rem;
+  }
+
+}
+@media screen and (max-width: 768px ){
+
+  .nav-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-button{
+    margin-right: 2rem;
+  }
+  #central-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+  #dashboard-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  #dashboard-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .dashboard-text-element {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .dashboard-table-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .dashboard-table-nav-nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .dashboard-table-nav-nav li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+  
+ 
+  .resume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dashboard-table-content-resumen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu-ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .side-menu-ul li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .side-menu-ul a{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  } 
+  .dashboard-table-content-panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .panel-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .panel-inner p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .panel-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .dashboard-table-content-panel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .panel-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  .uil-resume{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .uil-resume-b{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  
+  }
+  .uil-nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .uil-p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  select{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tables{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
+  table{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+   .tbody-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  .td-subtitle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .table-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  td{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  a{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .table-transfer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .input-transfer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .loan-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .tbody-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .loan-application{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  td{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  select{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .input-loan{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .edit-accounts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .delete-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  .select-responsive{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+  }
+  option{
+    font-size: 0.8rem;
+  }
+
+}

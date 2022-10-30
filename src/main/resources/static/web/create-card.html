@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/accounts.css" />
+    <link rel="stylesheet" href="/style/create-card.css">
+    <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
+    <title>Mindhub Bank</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+    <header>
+      <div class="nav-account">
+        <h1>Homebanking</h1>
+        <nav>
+          <ul>
+            <li><button class="login-button register"  @click="logout">Logout</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="central-section" class="inner dashboard">
+      <div id="dashboard-main">
+        <div id="dashboard-text">
+          <span>
+            <h2 class="dashboard-text-element">Welcome, Melba Morel</h2>
+         
+          </span>
+        </div>
+        <div id="dashboard-table">
+          <div class="dashboard-table-nav">
+              <ul class="dashboard-table-nav-nav">
+                <li class="resume"><i class="uil uil-resume uil-file-alt"></i><h3>Resume</h3></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-folder-open"></i><p class="uil-p"><a href="/web/accounts.html">Products</a></p></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-money-bill"></i><p class="uil-p"><a href="/web/cards.html">Cards</a></p></li>
+                <li class="nav-dash"><i class="uil uil-nav uil-folder-open"></i><p class="uil-p"><a href="/web/transfers.html">Transfers</a></p></li>
+              </ul>
+          </div>
+          <div class="dashboard-table-content">
+            <div class="dashboard-table-content-resumen">
+              <div class="side-menu">
+                <ul class="side-menu-ul">
+                  <li><i class="uil uil-resume-b uil-user-check"></i></li>
+                  <li class="side-menu-ul-active"><a href="/web/create-card.html">New Card</a></li>
+                </ul>
+              </div>
+              <div class="tables">
+                <table>
+                  <form v-on:submit.prevent>
+                    <tr>
+                       <input v-model="color" type="radio"  name="bank-card"  id="bank-card-silver" value="SILVER">
+                   <label for="bank-card-silver">
+                    <div class='card color1' >
+                      <div class='top-block'>
+                        <div class='card-chip'>
+                          <img class="card-logo" src="/assets/visaLogo.png" alt="visa logo" width="40">
+                        </div>
+                      </div>
+                  </div> 
+                   </label>
+                    </tr>
+                    <tr>
+                        <input  v-model="color" type="radio"  name="bank-card"  id="bank-card-gold" value="GOLD">
+                       <label for="bank-card-gold">
+                        <div class='card color2' >
+                          <div class='top-block'>
+                            <div class='card-chip'>
+                              <img class="card-logo" src="/assets/visaLogo.png" alt="visa logo" width="40">
+                            </div>
+                          </div>
+                      </div> 
+                       </label>
+                     </tr>
+                     <tr>
+                        <input v-model="color" type="radio" name="bank-card" id="bank-card-titanium" value="TITANIUM">
+                      <label for="bank-card-titanium">
+                        <div class='card color3' >
+                          <div class='top-block'>
+                            <div class='card-chip'>
+                              <img class="card-logo" src="/assets/visaLogo.png" alt="visa logo" width="40">
+                            </div>
+                          </div>
+                      </div> 
+                      </label>
+                     </tr>
+                     <tr>
+                        <select v-model="type">
+                            <option value="CREDIT">CREDIT</option>
+                            <option value="DEBIT">DEBIT</option>
+                        </select>
+                     </tr>
+                     <tr>
+                        <button class="panel-button" @click="newCard">Create</button>
+                     </tr>
+                    </form>
+                </table>
+
+              </div>
+
+            </div>
+            <div class="dashboard-table-content-panel">
+              <div class="panel">
+                <h3 class="panel-title">Transactions <i class="uil uil-comparison"></i></h3>
+                <div class="panel-inner">
+                  <button class="panel-button"><a class="loan-button"  href="/web/accounts.html">Consult</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      MINDHUB BANK - Homebanking
+    </footer>
+   </div>
+    <!--Scripts-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/script/card.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.card {
+    height: 70px;
+    width: 110px;
+    border-radius: 5px;
+    color:white;
+    margin:20px;
+    font-size: 16px;
+    box-shadow: 2px 2px 20px #707070;
+    margin: 3rem;
+    display: inline-block;
+  }
+  .color1{
+    background-image: linear-gradient(to right top, #535353, #565656, #595959, #5d5d5d, #606060, #666666, #6c6c6c, #727272, #7d7d7d, #888888, #939393, #9e9e9e);
+  }
+  .color2{
+    background-image: linear-gradient(to right top, #b06e37, #ba7c36, #c28b35, #c99a35, #ceaa36);
+  }
+  .color3{
+    background-image: linear-gradient(to right top, #1f83c5, #6a7fcc, #9e77c6, #c86eb4, #e46a99, #f16f7c, #f17c60, #e68e47, #cca539, #a8ba44, #78cb66, #01d998);
+  }
+  .card-chip {
+    margin: 1rem
+  }
+  [v-cloak]{
+    display: none;
+}
+
+
+ 
+ 
+ 
+ 
